@@ -1,0 +1,25 @@
+{
+  "name": "tqualityjsmattermost",
+  "version": "1.0.0",
+  "description": "Тестирование Mattermost с использованием Cypress",
+  "homepage": "https://github.com/vvleonov/TqualityJsMattermost#readme",
+  "bugs": {
+    "url": "https://github.com/vvleonov/TqualityJsMattermost/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvleonov/TqualityJsMattermost.git"
+  },
+  "license": "ISC",
+  "author": "VVLeonov",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.5.0",
+    "crypto-js": "^4.2.0",
+    "cypress": "^14.0.3"
+  }
+}
