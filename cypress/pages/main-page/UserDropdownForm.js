@@ -24,7 +24,7 @@ export default class UserDropdownForm extends BasePage {
     }
 
     getProfileImageSrc() {
-        return this.#profileImageContainer.getElement().invoke("attr", "src");
+        return this.#profileImageContainer.getAttribute("src");
     }
 
     closeForm() {

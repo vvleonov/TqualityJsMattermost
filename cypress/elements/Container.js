@@ -11,14 +11,26 @@ export default class Container extends BaseElement {
     }
 
     getText() {
-        return this.getElement().invoke("text");
+        return this._getElement().invoke("text");
     }
 
-    findChildByLocator(locator) {
-        return this.getElement().find(locator);
+    getCount() {
+        return this._getElement().then(elements => elements.length);
     }
 
-    findChildByText(text) {
-        return this.getElement().contains(text);
+    clickChild(locator) {
+        this._findChildByLocator(locator).click();
+    }
+
+    clickChildByText(text) {
+        this._findChildByText(text).click();
+    }
+
+    _findChildByLocator(locator) {
+        return this._getElement().find(locator);
+    }
+
+    _findChildByText(text) {
+        return this._getElement().contains(text);
     }
 }

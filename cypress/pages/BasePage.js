@@ -4,6 +4,10 @@ export default class BasePage {
      * @param {string} locator 
      * @param {string} name 
      */
+
+    _locator;
+    _name;
+
     constructor(locator, name) {
         this._locator = locator;
         this._name = name;

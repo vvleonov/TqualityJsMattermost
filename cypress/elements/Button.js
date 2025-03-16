@@ -11,6 +11,6 @@ export default class Button extends BaseElement {
     }
 
     getText() {
-        return this.getElement().invoke("text");
+        return this._getElement().invoke("text");
     }
 }

@@ -6,6 +6,10 @@ export default class BaseElement {
      * @param {string} locator 
      * @param {string} name 
      */
+
+    _locator;
+    _name;
+    
     constructor(locator, name) {
         this._locator = locator;
         this._name = name;
@@ -19,27 +23,27 @@ export default class BaseElement {
         return this._name;
     }
 
-    getElement() {
-        return cy.get(this._locator);
-    }
-
     click() {
         Logger.info(`Нажимаем на '${this._name}'`);
-        this.getElement().click();
+        this._getElement().click();
     }
 
     scrollTo(position) {
-        this.getElement().scrollTo(position);
+        this._getElement().scrollTo(position);
         return this;
     }
 
     getAttribute(attrName) {
-        return this.getElement().invoke("attr", attrName);
+        return this._getElement().invoke("attr", attrName);
     }
 
     isVisible() {
-        return this.getElement().then((el) => {
+        return this._getElement().then((el) => {
             Cypress.dom.isVisible(el);
         });
+    }
+
+    _getElement() {
+        return cy.get(this._locator);
     }
 }

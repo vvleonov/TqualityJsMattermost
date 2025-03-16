@@ -32,6 +32,6 @@ export default class NavigationBarForm extends BasePage {
     }
 
     openChannel(channelName) {
-        this.#sidebarChannelContainer.findChildByText(channelName).click();
+        this.#sidebarChannelContainer.clickChildByText(channelName);
     }
 }

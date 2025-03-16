@@ -18,6 +18,6 @@ export default class CreateTeamPage extends BasePage {
             ExceptionHelper.ignoreUncaughtException(this.#uncaughtException);
         }
 
-        this.#teamContainer.findChildByLocator(id).click();
+        this.#teamContainer.clickChild(id);
     }
 }

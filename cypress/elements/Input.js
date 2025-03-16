@@ -11,12 +11,12 @@ export default class Input extends BaseElement {
     }
 
     type(text, options) {
-        this.getElement().type(text, options);
+        this._getElement().type(text, options);
         return this;
     }
 
     clear() {
-        this.getElement().clear();
+        this._getElement().clear();
         return this;
     }
 }

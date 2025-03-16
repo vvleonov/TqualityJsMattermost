@@ -14,9 +14,7 @@ export default class MembersForm extends BasePage {
     }
 
     getMemberListLength() {
-        return this.#membersContainer.getElement().then(elements => {
-            return elements.length;
-        });
+        return this.#membersContainer.getCount();
     }
     
     close() {
